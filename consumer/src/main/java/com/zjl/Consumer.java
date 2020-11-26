@@ -1,19 +1,19 @@
 package com.zjl;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @auther zoujialiang
- * @date 2020/11/21 21:33
+ * @date 2020/11/26 21:20
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@MapperScan("com.zjl.mapper")
-public class Main {
+@EnableFeignClients
+public class Consumer {
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(Consumer.class, args);
     }
 }

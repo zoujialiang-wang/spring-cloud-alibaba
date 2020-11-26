@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 175.24.187.4:8848
+  application:
+    name: consumer
+server:
+  port: 8002
+ribbon:
+  #  连接建立的超时时长，默认1秒
+  ConnectTimeout: 2000
+  #  处理请求的超时时间，默认为1秒
+  ReadTimeout: 2000
+logging:
+  level:
+    # feign日志以什么级别监控哪个接口
+    com.zjl.feign.ProviderFeign: debug
